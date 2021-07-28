@@ -1,4 +1,4 @@
-﻿$global:fqdn = "your_fqdn"
+$global:fqdn = "your_fqdn"
 $global:token = 'your_configuration_token' 
 
 $code = @"
@@ -89,5 +89,5 @@ function Set-LeAccount {
 #   Get the account information for the account you want to change
 $a = Get-LeAccounts | Where {$_.username -like "abc"}
 
-#   Update the account with the settings you want.
+#   Update the account with the settings you want
 Set-LeAccount -accountId $a.id -password "NewPassword123" -username "NewUsername123" -domainId "NewDomain123"
