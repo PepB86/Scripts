@@ -89,6 +89,8 @@ Set-ItemProperty -Path "HKLM:Software\Microsoft\Windows NT\CurrentVersion\Winlog
 Set-ItemProperty -Path "HKLM:Software\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name "AutoLogonCount" -Value 999 -Force
 Remove-ItemProperty -Path "HKLM:Software\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name "AutoLogonSID" -Force -Erroraction silentlycontinue
 
+Set-DisplayResolution -Width 1920 -Height 1080 -Force
+
 
 # Run the MSFT VDI optimizer
 if (-not (Test-Path "C:\VDIOptimizer")) {
